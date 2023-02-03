@@ -1,0 +1,22 @@
+tfte: main.o display.o menu.o set.o message.o update.o util.o
+        cc main.o display.o menu.o set.o message.o update.o util.o -o tfte -lncurses
+
+main.o:display.h library.h
+
+display.o:display.h
+
+menu.o:library.h
+
+set.o:library.h
+
+message.o:library.h
+
+update.o:library.h
+
+util.o:library.h
+
+
+clean:
+        rm -f *.o
+real_clean:
+        rm -f *.o a.out
